@@ -1,0 +1,26 @@
+
+----FUNCTIONS-----
+--using THE OFFICE table
+
+SELECT COUNT(emp_id)
+from employee;
+
+--find the number of girls born after 1970
+ 
+ SELECT count(emp_id) from employee
+ where sex = 'F' and birth_day > '1970-01-01';
+
+ -- find avareage employee salary
+ SELECT SUM(salary)/9 from employee;
+ --or
+
+ SELECT AVG(salary) from employee;
+ 
+ -- find how many male and female are there
+ SELECT count(sex), sex from employee
+ GROUP BY sex;
+
+ -- find total sale of all sale staff
+ SELECT * FROM works_with;
+ SELECT sum(total_sales), emp_id from works_with
+ GROUP BY emp_id;
