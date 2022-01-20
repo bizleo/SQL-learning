@@ -1,0 +1,12 @@
+-- find a cliets that have LLc in the name
+
+SELECT * FROM client
+WHERE client_name LIKE '%LLC';
+
+
+
+SELECT * FROM employee
+where birth_day like '____-10%';
+
+--- % any number of characthers
+--- _ only one characther
