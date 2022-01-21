@@ -1,0 +1,12 @@
+-- find a list of employees and branch name
+
+
+SELECT first_name FROM employee 
+UNION
+SELECT branch_name FROM branch; 
+
+--- list all money expend and own by the company
+
+SELECT salary FROM employee
+UNION
+SELECT total_sales from works_with;
