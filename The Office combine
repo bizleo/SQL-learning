@@ -1,0 +1,16 @@
+--combine different tables
+
+INSERT INTO branch VALUES(4, 'Buffalo', NULL,NULL);
+
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+JOIN branch
+on employee.emp_id = branch.mgr_id
+LIMIT  10;
+
+--- join left to include a colomn
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+LEFT JOIN branch
+on branch.branch_id = employee.branch_id
+LIMIT  10;
